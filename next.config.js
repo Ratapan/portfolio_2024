@@ -3,7 +3,7 @@
  */
 const nextConfig = {
   i18n: {
-    locales: ['en', 'es'],
+    locales: ['es','en'],
     defaultLocale: 'es',
     //todo: make the text files
   },

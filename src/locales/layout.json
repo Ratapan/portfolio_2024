@@ -1,0 +1,21 @@
+{
+  "en": {
+    "title": "Your News",
+    "content": [
+      {
+        "title": "Otter.ai’s new assistant can automatically transcribe your Zoom meetings",
+        "synopsis": "A.I.-powered voice transcription service Otter.ai wants to make it even easier for its business users to record their meetings. The company is today introducing a new feature, Otter Assistant, whic..."
+      }
+    ]
+  },
+  "es-ES": {
+    "title": "Tus noticias",
+    "content": [
+      {
+        "title": "El nuevo asistente de Otter.ai puede transcribir automáticamente sus reuniones de Zoom",
+        "synopsis": "El servicio de transcripción de voz con tecnología de inteligencia artificial Otter.ai quiere facilitar aún más a sus usuarios comerciales la grabación de sus reuniones. La compañía presenta hoy una nueva función, Otter Assistant, que ...",
+        "imageUrl": ""
+      }
+    ]
+  }
+}

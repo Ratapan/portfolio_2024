@@ -1,12 +1,14 @@
 import { useState } from "react";
 import ThemeChangerBtn from "./themeButton";
+import LangChangerBtn from "./langButton";
+
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const sidebarClass =
-    "flex flex-col max-h-dvh justify-center items-center bg-coffee_bg_two dark:bg-zinc-700 pt-4 pb-0 py-2 rounded-tl-xl rounded-bl-xl shadow-[0_0_4px] dark:shadow-zinc-400 transition duration-500";
+    "flex flex-col max-h-dvh justify-center items-center bg-coffee_bg_two dark:bg-zinc-700 pt-4 pb-0 py-2 rounded-tl-xl rounded-bl-xl shadow-[0_0_4px] dark:shadow-zinc-400 transition duration-500 select-none";
   return (
     <nav className={`${sidebarClass} ${sidebar ? "w-40" : "w-12"}`}>
       <Image
@@ -61,8 +63,24 @@ export default function Navbar() {
             </span>
             <span className="text-lg">{sidebar ? "Projects" : ""}</span>
           </Link>
+          <Link
+            href="/aboutme"
+            className="p-1 rounded-lg dark:hover:bg-zinc-800 hover:bg-coffee_bg dark:bg-zinc-700:bg-coffee_bg_two flex items-center"
+          >
+            <span className="w-8">
+              <Image
+                src="/coffeIcons/sun.svg"
+                alt="Projects"
+                className="m-auto"
+                width={24}
+                height={24}
+              />
+            </span>
+            <span className="text-lg">{sidebar ? "About me" : ""}</span>
+          </Link>
         </ul>
       </section>
+      <LangChangerBtn sidebarState={sidebar} />
       <ThemeChangerBtn sidebarState={sidebar} />
     </nav>
   );

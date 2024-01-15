@@ -1,3 +1,4 @@
+@import './utils/scroll.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

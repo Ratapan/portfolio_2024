@@ -15,6 +15,7 @@ const config: Config = {
         coffee_bg_two: "#FFFCF4",
         coffee_foreground: "#422A00",
         coffee_foreground_acent: "#922A00",
+        coffee_icon_1: "#A07250",
       },
     },
   },

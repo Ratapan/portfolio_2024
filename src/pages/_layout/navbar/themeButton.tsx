@@ -17,16 +17,16 @@ export default function ThemeChangerBtn({
       <button className={buttonClassName} onClick={() => setTheme("light")}>
         <Image
           src="/coffeIcons/coffe.svg"
-          width={20}
-          height={20}
+          width={24}
+          height={24}
           alt="Picture of the author"
         />
       </button>
       <button className={buttonClassName} onClick={() => setTheme("dark")}>
         <Image
           src="/coffeIcons/moon.svg"
-          width={24}
-          height={24}
+          width={22}
+          height={22}
           alt="Picture of the author"
         />
       </button>
