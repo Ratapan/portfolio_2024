@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const sidebarClass =
-    "flex flex-col max-h-dvh justify-center items-center bg-coffee_bg_two dark:bg-zinc-700 pt-4 pb-0 py-2 rounded-tl-xl rounded-bl-xl shadow-[0_0_4px] dark:shadow-zinc-400 transition duration-500 select-none";
+    "inset-0 z-1 relative flex flex-col max-h-dvh justify-center items-center bg-coffee_bg_two dark:bg-zinc-700 pt-4 pb-0 py-2 rounded-tl-xl rounded-bl-xl shadow-[0_0_4px] dark:shadow-zinc-400 transition duration-500 select-none";
   return (
     <nav className={`${sidebarClass} ${sidebar ? "w-40" : "w-12"}`}>
       <Image

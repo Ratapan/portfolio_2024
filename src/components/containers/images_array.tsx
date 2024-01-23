@@ -1,24 +1,51 @@
 import Image from "next/image";
 
-type sectionNameProps = {
+type ImagesArrayProps = {
   sectionName: string;
-  size?:number;
-  className?:string;
-  images: string[];
+  size?: { height: number; width: number };
+  className?: string;
+  imagesLink: { image: string; link?: string }[];
 };
 
 export default function ImagesArray({
-  images,
+  imagesLink,
   sectionName,
   className,
-  size
-}: sectionNameProps) {
-  const imagesLength = images.length
+  size,
+}: ImagesArrayProps) {
+  const imagesLinkLength = imagesLink.length;
   return (
-    <section className={`flex ${className??''}`}>
-      {
-        images.map((im,index)=><Image className={index == imagesLength-1?'':'mr-4'} src={im} alt={`image ${im} of section ${sectionName}`} key={`${sectionName}-${im}`} height={size??48} width={size??48}/>)
-      }
+    <section className={`flex ${className ?? ""}`}>
+      {imagesLink.map((im, index) => {
+        if (im.link) {
+          return (
+            <a
+              href={im.link}
+              key={`${sectionName}-${im.image}`}
+              target="_blank"
+              className="flex items-center"
+            >
+              <Image
+                className={index == imagesLinkLength - 1 ? "" : "mr-4"}
+                src={im.image}
+                alt={`image ${im} of section ${sectionName}`}
+                height={size?.height ?? 48}
+                width={size?.width ?? 48}
+              />
+            </a>
+          );
+        }
+        return (
+          <Image
+            className={index == imagesLinkLength - 1 ? "" : "mr-4"}
+            src={im.image}
+            alt={`image ${im} of section ${sectionName}`}
+            key={`${sectionName}-${im.image}`}
+            height={size?.height ?? 48}
+            width={size?.width ?? 48}
+          />
+        );
+      })}
     </section>
   );
 }

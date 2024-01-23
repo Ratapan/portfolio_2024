@@ -29,8 +29,7 @@ const about = {
           company: "Carpetres",
           position: "Desarrollador de software",
           dates: "Octubre 2021 - Mayo 2022",
-          content: `
-            Consultoría:\n
+          content: `Consultoría:\n
             Desarrollo y mantención de aplicaciones web con Vue.js, para empresas como bboch, Sierra gorda, entre otros. Landing pages para Copec en una campaña para mercado público, productos internos con los que recogíamos métricas y entre otros casos. Con un framework de javascript o html, css y js puro, dependiendo de las necesidades del proyecto y el cliente.\n
             Producto interno:\n
             Desarrollé, desde la base, junto a todo el equipo, una aplicación web tipo ERP, recibía historias de usuario y módulos diseñados en Adobe XD, con el fin de decidir como se implementarían estos, hacíamos reuniones periódicamente para darnos feedback entre font-end web, movil, back-end y diseñadores. Cabe destacar que esto lo realizábamos bajo una adaptación de Scrum y Lean, lo principal era la comunicación y la confianza de levantar dudas.
@@ -80,8 +79,7 @@ const about = {
           company: "Carpetres",
           position: "Software Developer",
           dates: "October 2021 - May 2022",
-          content: `
-            Consulting:\n
+          content: `Consulting:\n
             Developed and maintained web applications with Vue.js for companies like bboch, Sierra Gorda, among others. Landing pages for Copec in a public market campaign, internal products for gathering metrics, and other cases. Used a JavaScript framework or pure HTML, CSS, and JS depending on the project and client needs.\n
             Internal Product:\n
             Developed from scratch, along with the entire team, a web-based ERP application, received user stories and modules designed in Adobe XD, to decide how they would be implemented. We held regular meetings for feedback among web, mobile, backend, and designers. Notably, this was performed under an adaptation of Scrum and Lean, with the main focus being communication and trust in raising doubts.

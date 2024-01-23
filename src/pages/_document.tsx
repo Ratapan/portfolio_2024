@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
  
 export default function Document() {
   return (
-    <Html className='coffe'>
+    <Html>
       <Head>
         <link rel="shortcut icon" href="/coffeIcons/RTP.svg" />
       </Head>
