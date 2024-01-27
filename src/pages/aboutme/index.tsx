@@ -9,7 +9,7 @@ import about from "@/locales/about";
 import { localeSafety } from "@/locales/types";
 import { useRouter } from "next/router";
 
-export default function Blog() {
+export default function AboutMe() {
   const { locale } = useRouter();
   const safeLocale = localeSafety(locale);
 

@@ -6,13 +6,13 @@ export default function LangChangerBtn({
 }: {
   sidebarState: boolean;
 }) {
-  const { locale, locales, defaultLocale, asPath } = useRouter();
+  const { locales, asPath } = useRouter();
 
   const buttonClassName =
     "flex justify-center text-coffee_icon_1 font-semibold";
   return (
     <div
-      className={`grid w-full py-2 gap-2 rounded-tl-xl dark:bg-zinc-800 bg-coffee_bg ${
+      className={`grid w-full py-1 gap-2 rounded-tl-xl dark:bg-zinc-800 bg-coffee_bg ${
         sidebarState ? "grid-cols-2 grid-rows-1" : "grid-cols-1 grid-rows-2"
       }`}
     >

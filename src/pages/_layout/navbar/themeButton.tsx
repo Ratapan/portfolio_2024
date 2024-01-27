@@ -10,7 +10,7 @@ export default function ThemeChangerBtn({
   const buttonClassName = "flex justify-center";
   return (
     <div
-      className={`grid w-full py-2 gap-2 rounded-bl-xl dark:bg-zinc-800 bg-coffee_bg ${
+      className={`grid w-full py-1 gap-2 rounded-bl-xl dark:bg-zinc-800 bg-coffee_bg ${
         sidebarState ? "grid-cols-2 grid-rows-1" : "grid-cols-1 grid-rows-2"
       }`}
     >
