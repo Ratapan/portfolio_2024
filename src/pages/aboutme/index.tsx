@@ -7,6 +7,7 @@ import SectionTitle from "@/components/titles/section_title";
 import SubTitle from "@/components/titles/sub_title";
 import about from "@/locales/about";
 import { localeSafety } from "@/locales/types";
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function AboutMe() {
@@ -25,6 +26,9 @@ export default function AboutMe() {
 
   return (
     <article className="relative pt-6">
+      <Head>
+        <title>@ratapan</title>
+      </Head>
       <BgDots />
       <header className=" relative mb-8">
         <TitleHeader> {content.title} </TitleHeader>

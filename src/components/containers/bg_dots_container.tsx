@@ -6,7 +6,6 @@ export default function BgDots() {
   const [bgColor, setBgColor] = useState("bg-[radial-gradient(#8b8b8b_1px,transparent_1px)]");
 
   useEffect(() => {
-    console.log(theme);
 
     if (theme === "dark") {
       setBgColor("bg-[radial-gradient(#fffcf450_1px,transparent_1px)]");
