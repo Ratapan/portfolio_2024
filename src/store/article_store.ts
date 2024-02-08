@@ -18,6 +18,7 @@ type Article = {
   slug: string;
   path: string;
   url: string;
+  canonical_url: string;
   comments_count: number;
   public_reactions_count: number;
   collection_id: null;

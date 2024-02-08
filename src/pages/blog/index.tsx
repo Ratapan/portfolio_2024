@@ -5,7 +5,6 @@ import blog from "@/locales/blog";
 import { localeSafety } from "@/locales/types";
 import useArticleStore from "@/store/article_store";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
@@ -56,6 +55,7 @@ export default function Blog() {
                   {art.title}
                 </h3>
               </header>
+
               <main className="px-2 pt-2 flex flex-col gap-1 justify-center">
                 <p>{art.description}</p>
                 <div className="flex justify-between">
@@ -70,12 +70,13 @@ export default function Blog() {
                       {formatDate(art.readable_publish_date)}
                     </span>
                   </p>
-                  <Link
-                    href={`/blog/${art.id}`}
+                  <a
+                    target="_blank"
+                    href={`${art.canonical_url}`}
                     className="transition-colors px-2 py-1 rounded-sm bg-primary hover:bg-secondary"
                   >
-                    ver mas
-                  </Link>
+                    {content.showArticle}
+                  </a>
                 </div>
               </main>
             </article>
