@@ -24,7 +24,7 @@ export default function DocPaper({
       ) : (
         <div className="h-8"></div>
       )}
-      <main className="relative w-10/12 mx-auto">
+      <main className="relative  mx-auto w-full sm:w-11/12 md:w-10/12">
         {children}
       </main>
     </article>

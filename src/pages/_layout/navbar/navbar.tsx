@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav
       className={`${sidebarClass} transition-width duration-200 ease-linear ${
-        sidebar ? "w-44" : "w-12"
+        sidebar ? "w-44" : "w-14"
       }`}
     >
       <Image

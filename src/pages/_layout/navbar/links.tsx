@@ -22,6 +22,7 @@ export default function LinksNavButtons({
     text: string;
     img: string;
     size: number;
+    sizeMini: number;
   };
   const links = [
     {
@@ -29,44 +30,49 @@ export default function LinksNavButtons({
       img: "sun.svg",
       text: "About me",
       size: 24,
+      sizeMini: 18,
     },
     {
       link: "/blog",
       img: "blog.svg",
       text: "Blog",
       size: 21,
+      sizeMini: 16,
     },
     {
       link: "/projects",
       img: "project.svg",
       text: "Project",
       size: 24,
+      sizeMini: 18,
     },
   ] as linkNav[];
-  
+
   return (
     <TooltipProvider>
-      <ul className="grid max-w-full w-[90%] grid-cols-1 gap-2">
+      <ul className="grid max-w-full md:w-[90%] grid-cols-1 gap-2 overflow-clip">
         {links.map((link, i) => (
           <Tooltip key={`nav-link-${i}`}>
             <TooltipTrigger>
               <Link
                 href={link.link}
                 className={`${linkClassName} ${
-                  sidebarState ? "" : "w-8 mx-auto flex justify-center items-center"
+                  sidebarState
+                    ? ""
+                    : "w-8 relative -right-1 py-2 mx-auto flex justify-center items-center"
                 } ${
                   link.link.includes(asPath)
                     ? " shadow-coffee_foreground dark:shadow-zinc-500 shadow-[inset_0_0_4px]"
                     : ""
                 }`}
               >
-                <span className={sidebarState ? "w-8" : ""} >
+                <span className={sidebarState ? "w-8" : ""}>
                   <Image
                     src={`/coffeIcons/${link.img}`}
                     alt={link.text}
                     className="m-auto"
-                    width={link.size}
-                    height={link.size}
+                    width={sidebarState ? link.size : link.sizeMini}
+                    height={sidebarState ? link.size : link.sizeMini}
                   />
                 </span>
                 <span className="text-sm">{sidebarState ? link.text : ""}</span>
