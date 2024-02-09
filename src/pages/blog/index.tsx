@@ -42,7 +42,7 @@ export default function Blog() {
         ) : (
           articles.map((art) => (
             <article
-              className="bg-coffee_bg_two dark:bg-zinc-700 rounded-xl p-2"
+              className="bg-coffee_bg_two dark:bg-zinc-700 shadow-[0_0_4px] dark:shadow-zinc-400 rounded-xl p-2"
               key={`blog-article-${art.id}`}
             >
               <header className="relative rounded-lg overflow-clip">
@@ -55,7 +55,6 @@ export default function Blog() {
                   {art.title}
                 </h3>
               </header>
-
               <main className="px-2 pt-2 flex flex-col gap-1 justify-center">
                 <p>{art.description}</p>
                 <div className="flex justify-between">
@@ -73,7 +72,7 @@ export default function Blog() {
                   <a
                     target="_blank"
                     href={`${art.canonical_url}`}
-                    className="transition-colors px-2 py-1 rounded-sm bg-primary hover:bg-secondary"
+                    className="transition-colors px-2 rounded-sm bg-primary hover:bg-secondary text-sm font-semibold items-center justify-center flex"
                   >
                     {content.showArticle}
                   </a>

@@ -25,4 +25,4 @@ const nextConfig = {
     //todo: make the text files
   },
 };
-module.exports = nextConfig;
+export default nextConfig;

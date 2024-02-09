@@ -6,8 +6,9 @@ import TitleHeader from "@/components/titles/header";
 import SectionTitle from "@/components/titles/section_title";
 import SubTitle from "@/components/titles/sub_title";
 import about from "@/locales/about";
-import { localeSafety } from "@/locales/types";
 import Head from "next/head";
+
+import { localeSafety } from "@/locales/types";
 import { useRouter } from "next/router";
 
 export default function AboutMe() {
@@ -30,21 +31,25 @@ export default function AboutMe() {
         <title>@ratapan</title>
       </Head>
       <BgDots />
-      <header className=" relative mb-8">
-        <TitleHeader> {content.title} </TitleHeader>
+      <header className="mb-8">
+        <TitleHeader>
+          {content.title}{" "}
+          <span>
+            🖐
+          </span>
+        </TitleHeader>
         <h4 className="w-full text-md text-center font-bold">
           {content.subTitle}
         </h4>
       </header>
       <main className="relative">
         <PresentationContainer imgeUrl="/images/yo.png">
-          {content.content.aboutMe.split('\n').map((cont,i)=>(
-            <>
-            <span>{cont}</span>
-            <br/>
-            </>
+          {content.content.aboutMe.split("\n").map((cont, i) => (
+            <span key={i + "-presentatatio"}>
+              <span>{cont}</span>
+              <br />
+            </span>
           ))}
-     
         </PresentationContainer>
         <section>
           <SubTitle>{content.sections.searchMe}</SubTitle>

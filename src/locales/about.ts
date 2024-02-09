@@ -1,7 +1,7 @@
 const about = {
   es: {
-    title: "Hola, soy Javier Sabando 🖐",
-    subTitle: "✨ A passionate software engineer from Chile ✨",
+    title: "Hola, soy Javier Sabando ",
+    subTitle: "✨ Un apasionado ingeniero de software chileno ✨",
     sections: {
       toolsTitle: "Herramientas que manejo o conozco 🦿",
       toolsFront: "Frontend",
@@ -52,7 +52,7 @@ const about = {
     },
   },
   en: {
-    title: "Hello, I'm Javier Sabando 🖐",
+    title: "Hello, I'm Javier Sabando ",
     subTitle: "✨ A passionate software engineer from Chile ✨",
     sections: {
       toolsTitle: "Tools I Handle or Know 🦿",

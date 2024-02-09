@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { DetailsHTMLAttributes, ReactEventHandler, useState } from "react";
+import { useState } from "react";
 type XpDetailsContainerProps = {
   company: string;
   position: string;
@@ -44,12 +44,16 @@ export default function XpDetailsContainer({
           isOpen ? "animate-sweep-content" : "opacity-0"
         }`}
       >
-        <p className="text-coffee_foreground_acent dark:text-teal-200">{dates}</p>
+        <p className="text-coffee_foreground_acent dark:text-teal-200">
+          {dates}
+        </p>
         {content.split("\n").map((cont, i) => (
           <p key={`${company.split(" ").join("-")}-${i}`}>{cont}</p>
         ))}
         <p>{skillsTitle}</p>
-        <p className="text-coffee_foreground_acent dark:text-teal-200">{skills}</p>
+        <p className="text-coffee_foreground_acent dark:text-teal-200">
+          {skills}
+        </p>
       </article>
     </details>
   );
