@@ -10,7 +10,7 @@ export default function PresentationContainer({
   children,
 }: PresentationContainerProps) {
   return (
-    <div className="bg-coffee_bg_two dark:bg-zinc-700 rounded-xl p-4 grid gap-4  w-10/12 m-auto md:grid-cols-3">
+    <div className="bg-coffee_bg_two dark:bg-zinc-700 rounded-xl p-4 grid gap-4  m-auto sm:w-11/12 md:w-10/12  md:grid-cols-3">
       <div className="flex items-center justify-center w-full ">
         <Image
           width="400"
@@ -21,7 +21,7 @@ export default function PresentationContainer({
           alt="Mi fotografia"
         />
       </div>
-      <p className="md:col-span-2 flex md:text-sm items-center">{children}</p>
+      <p className="md:col-span-2  md:text-sm">{children}</p>
     </div>
   );
 }

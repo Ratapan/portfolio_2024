@@ -19,30 +19,32 @@ export default function LinksNavButtons({
     link: string;
     text: string;
     img: string;
+    size: number;
   };
   const links = [
+    {
+      link: "/aboutme",
+      img: "sun.svg",
+      text: "About me",
+      size: 24
+    },
     {
       link: "/blog",
       img: "blog.svg",
       text: "Blog",
+      size: 21
     },
     {
       link: "/projects",
       img: "project.svg",
       text: "Project",
-    },
-
-    {
-      link: "/aboutme",
-      img: "sun.svg",
-      text: "About me",
+      size: 24
     },
   ] as linkNav[];
   return (
     <TooltipProvider>
       <ul className="grid max-w-full w-[90%] grid-cols-1 gap-2">
         {links.map((link, i) => (
-
           <Tooltip key={`nav-link-${i}`}>
             <TooltipTrigger>
               <Link href={link.link} className={linkClassName}>
@@ -51,8 +53,8 @@ export default function LinksNavButtons({
                     src={`/coffeIcons/${link.img}`}
                     alt={link.text}
                     className="m-auto"
-                    width={22}
-                    height={22}
+                    width={link.size}
+                    height={link.size}
                   />
                 </span>
                 <span className="text-sm">{sidebarState ? link.text : ""}</span>
@@ -62,7 +64,6 @@ export default function LinksNavButtons({
               <p>Ir a "{link.text}"</p>
             </TooltipContent>
           </Tooltip>
-
         ))}
       </ul>
     </TooltipProvider>

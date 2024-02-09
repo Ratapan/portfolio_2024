@@ -4,8 +4,8 @@ const about = {
     subTitle: "✨ A passionate software engineer from Chile ✨",
     sections: {
       toolsTitle: "Herramientas que manejo o conozco 🦿",
-      toolsFront: "Backend",
-      toolsBackend: "Frontend",
+      toolsFront: "Frontend",
+      toolsBackend: "Backend",
       toolsDesign: "Diseño",
       toolsOther: "Otras",
       xpTitle: "Experiencia 🧐",
@@ -14,7 +14,9 @@ const about = {
     },
     content: {
       aboutMe:
-        "Soy un Analista Programador, con más de un año de experiencia en desarrollo front-end e Ingeniero Informático, terminando su último semestre. Me apasiona estar actualizado con las tendencias en tecnología, aprender a ocupar nuevas herramientas y obtener nuevas habilidades que me interesan. Considero que tengo buena adaptabilidad en equipos de trabajo, además de experiencia con trabajo remoto, hibrido y presencial, los campos que más me interesan son el front-end, BI, AI y product design con metodologías tipo Lean Startup.",
+        `Hola, soy Javier Sabando, más conocido como Ratapan. Como Analista Programador e Ingeniero Informático, me especializo en mantenerme al día con las tendencias tecnológicas y dominar nuevas herramientas y habilidades.\n 
+        Mi pasión por la fotografía y la resolución de problemas se complementa con mi adaptabilidad en equipos de trabajo y experiencia en modalidades remota, híbrida y presencial.\n
+        Me interesan profundamente áreas como el frontend, backend, Business Intelligence, Inteligencia Artificial y el diseño de productos, siempre en busca de aplicar metodologías eficientes como Lean Startup.`,
      
       xp: [
         {
@@ -54,8 +56,8 @@ const about = {
     subTitle: "✨ A passionate software engineer from Chile ✨",
     sections: {
       toolsTitle: "Tools I Handle or Know 🦿",
-      toolsFront: "Backend",
-      toolsBackend: "Frontend",
+      toolsFront: "Frontend",
+      toolsBackend: "Backend",
       toolsDesign: "Design",
       toolsOther: "Others",
       xpTitle: "Experience 🧐",
@@ -64,7 +66,10 @@ const about = {
     },
     content: {
       aboutMe:
-        "I am a Programmer Analyst with more than a year of experience in front-end development and a Computer Engineer, finishing my last semester. I am passionate about staying updated with technology trends, learning to use new tools, and acquiring new skills that interest me. I believe I have good adaptability in teams, as well as experience with remote, hybrid, and on-site work. The fields that interest me the most are front-end, BI, AI, and product design with methodologies like Lean Startup.",
+        `
+        Hello, I'm Javier Sabando, better known as Ratapan. As a Programming Analyst and Computer Engineer, I specialize in staying abreast of the latest technological trends and mastering new tools and skills.\n 
+        My passion for photography and problem-solving is complemented by my adaptability in team settings and experience in remote, hybrid, and in-person work environments.\n
+        I have a profound interest in areas such as frontend, backend, Business Intelligence, Artificial Intelligence, and product design, consistently seeking to employ efficient methodologies like Lean Startup.`,
       
       xp: [
         {

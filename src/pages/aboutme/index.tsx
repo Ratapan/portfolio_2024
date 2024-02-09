@@ -17,8 +17,8 @@ export default function AboutMe() {
   const content = about[safeLocale];
 
   const setPath = (
-    arr: { image: string; link?: string }[]
-  ): { image: string; link?: string }[] =>
+    arr: { image: string; link?: string; width?: number }[]
+  ): { image: string; link?: string; width?: number }[] =>
     arr.map((obj) => {
       obj.image = `/coffeIcons/${obj.image}.svg`;
       return obj;
@@ -32,18 +32,26 @@ export default function AboutMe() {
       <BgDots />
       <header className=" relative mb-8">
         <TitleHeader> {content.title} </TitleHeader>
-        <h4 className="w-full text-md text-center font-bold">{content.subTitle}</h4>
+        <h4 className="w-full text-md text-center font-bold">
+          {content.subTitle}
+        </h4>
       </header>
       <main className="relative">
         <PresentationContainer imgeUrl="/images/yo.png">
-          {content.content.aboutMe}
+          {content.content.aboutMe.split('\n').map((cont,i)=>(
+            <>
+            <span>{cont}</span>
+            <br/>
+            </>
+          ))}
+     
         </PresentationContainer>
-
         <section>
           <SubTitle>{content.sections.searchMe}</SubTitle>
           <ImagesArray
-            size={{ height: 28, width: 28 }}
+            size={{ height: 34, width: 34 }}
             className="justify-center"
+            classNameChildrens="transition-transform hover:scale-125"
             sectionName="searchMe"
             imagesLink={setPath([
               {
@@ -51,13 +59,16 @@ export default function AboutMe() {
                 link: "https://www.linkedin.com/in/javier-sabando/",
               },
               { image: "ig", link: "https://www.instagram.com/ratapics" },
-              { image: "youtube", link: "https://www.youtube.com/@rtpdev" },
+              {
+                image: "youtube",
+                link: "https://www.youtube.com/@rtpdev",
+                width: 42,
+              },
             ])}
           />
         </section>
-
         <br />
-        <section className="m-auto w-10/12">
+        <section className="m-auto sm:w-11/12 md:w-10/12">
           <SubTitle>{content.sections.xpTitle}</SubTitle>
           {content.content.xp.map(
             ({ company, position, dates, content, skillsTitle, skills }, i) => (
@@ -70,14 +81,12 @@ export default function AboutMe() {
                 skillsTitle={skillsTitle}
                 skills={skills}
                 name="experience"
-                
               />
             )
-          )} 
+          )}
         </section>
         <br />
-
-        <section className="m-auto w-10/12">
+        <section className="m-auto sm:w-11/12 md:w-10/12">
           <SubTitle>{content.sections.toolsTitle}</SubTitle>
           <SectionTitle>{content.sections.toolsBackend}</SectionTitle>
           <ImagesArray
@@ -86,12 +95,11 @@ export default function AboutMe() {
             imagesLink={setPath([
               { image: "python" },
               { image: "django" },
-              { image: "express" },
+              { image: "express", width: 80 },
               { image: "graphql" },
-              { image: "firebase" },
-              { image: "node" },
-              { image: "mysql" },
-              { image: "mongo" },
+              { image: "node", width: 80 },
+              { image: "mysql", width: 65 },
+              { image: "mongo", width: 80 },
             ])}
           />
 

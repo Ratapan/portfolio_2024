@@ -3,15 +3,18 @@ import ThemeChangerBtn from "./themeButton";
 import LangChangerBtn from "./langButton";
 
 import Image from "next/image";
-import Link from "next/link";
 import LinksNavButtons from "./links";
 
 export default function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const sidebarClass =
-    "inset-0 z-1 relative flex flex-col max-h-dvh justify-center items-center bg-coffee_bg_two dark:bg-zinc-700 pt-4 pb-0 py-2 rounded-tl-xl rounded-bl-xl shadow-[0_0_4px] dark:shadow-zinc-400 transition duration-500 select-none";
+    "inset-0 z-1 relative flex flex-col max-h-dvh justify-center items-center bg-coffee_bg_two dark:bg-zinc-700 pt-4 pb-0 py-2 rounded-tl-xl rounded-bl-xl shadow-[0_0_4px] dark:shadow-zinc-400 select-none";
   return (
-    <nav className={`${sidebarClass} ${sidebar ? "w-44" : "w-12"}`}>
+    <nav
+      className={`${sidebarClass} transition-width duration-200 ease-linear ${
+        sidebar ? "w-44" : "w-12"
+      }`}
+    >
       <Image
         src="/coffeIcons/RTP.svg"
         className="p-1"
@@ -35,7 +38,6 @@ export default function Navbar() {
         </button>
 
         <LinksNavButtons sidebarState={sidebar} />
-        
       </section>
       <LangChangerBtn sidebarState={sidebar} />
       <ThemeChangerBtn sidebarState={sidebar} />
