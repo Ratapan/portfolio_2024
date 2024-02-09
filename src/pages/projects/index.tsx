@@ -11,7 +11,12 @@ export default function Projects() {
       </Head>
       <BgDots />
       <header className="mb-8"></header>
-      <section className="grid gap-4 mb-8"></section>
+      <section className="grid gap-4 mb-8 relative">
+        <Skeleton className="h-20 w-full opacity-70 animate-bouncing repeat-infinite  rounded-xl p-4" />
+        <Skeleton className="h-40 w-full opacity-70 animate-bouncing repeat-infinite  rounded-xl p-4" />
+        <Skeleton className="h-20 w-full opacity-70 animate-bouncing repeat-infinite  rounded-xl p-4" />
+        <Skeleton className="h-40 w-full opacity-70 animate-bouncing repeat-infinite  rounded-xl p-4" />
+      </section>
     </DocPaper>
   );
 }

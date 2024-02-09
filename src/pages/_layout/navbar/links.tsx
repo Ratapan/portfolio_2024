@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   Tooltip,
   TooltipContent,
@@ -12,6 +13,7 @@ export default function LinksNavButtons({
 }: {
   sidebarState: boolean;
 }) {
+  const { asPath } = useRouter();
   const linkClassName =
     "p-1 rounded-lg dark:hover:bg-zinc-800 hover:bg-coffee_bg dark:bg-zinc-700 bg-coffee_bg_two flex items-center";
 
@@ -26,29 +28,39 @@ export default function LinksNavButtons({
       link: "/aboutme",
       img: "sun.svg",
       text: "About me",
-      size: 24
+      size: 24,
     },
     {
       link: "/blog",
       img: "blog.svg",
       text: "Blog",
-      size: 21
+      size: 21,
     },
     {
       link: "/projects",
       img: "project.svg",
       text: "Project",
-      size: 24
+      size: 24,
     },
   ] as linkNav[];
+  
   return (
     <TooltipProvider>
       <ul className="grid max-w-full w-[90%] grid-cols-1 gap-2">
         {links.map((link, i) => (
           <Tooltip key={`nav-link-${i}`}>
             <TooltipTrigger>
-              <Link href={link.link} className={linkClassName}>
-                <span className="w-8">
+              <Link
+                href={link.link}
+                className={`${linkClassName} ${
+                  sidebarState ? "" : "w-8 mx-auto flex justify-center items-center"
+                } ${
+                  link.link.includes(asPath)
+                    ? " shadow-coffee_foreground dark:shadow-zinc-500 shadow-[inset_0_0_4px]"
+                    : ""
+                }`}
+              >
+                <span className={sidebarState ? "w-8" : ""} >
                   <Image
                     src={`/coffeIcons/${link.img}`}
                     alt={link.text}
