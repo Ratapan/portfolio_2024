@@ -15,10 +15,10 @@ export default function AboutMe() {
   const { locale } = useRouter();
   const safeLocale = localeSafety(locale);
 
-  const content = about[safeLocale];
+  const textContent = about[safeLocale];
 
   const setPath = (
-    arr: { image: string; link?: string; width?: number }[]
+    arr: { image: string; link?: string; width?: number }[],
   ): { image: string; link?: string; width?: number }[] =>
     arr.map((obj) => {
       obj.image = `/coffeIcons/${obj.image}.svg`;
@@ -33,18 +33,15 @@ export default function AboutMe() {
       <BgDots />
       <header className="mb-8">
         <TitleHeader>
-          {content.title}{" "}
-          <span>
-            🖐
-          </span>
+          {textContent.title} <span>🖐</span>
         </TitleHeader>
         <h4 className="w-full text-md text-center font-bold">
-          {content.subTitle}
+          {textContent.subTitle}
         </h4>
       </header>
       <main className="relative">
         <PresentationContainer imgeUrl="/images/yo.png">
-          {content.content.aboutMe.split("\n").map((cont, i) => (
+          {textContent.content.aboutMe.split("\n").map((cont, i) => (
             <span key={i + "-presentatatio"}>
               <span>{cont}</span>
               <br />
@@ -52,7 +49,7 @@ export default function AboutMe() {
           ))}
         </PresentationContainer>
         <section>
-          <SubTitle>{content.sections.searchMe}</SubTitle>
+          <SubTitle>{textContent.sections.searchMe}</SubTitle>
           <ImagesArray
             size={{ height: 34, width: 34 }}
             className="justify-center"
@@ -74,8 +71,8 @@ export default function AboutMe() {
         </section>
         <br />
         <section className="m-auto sm:w-11/12 md:w-10/12">
-          <SubTitle>{content.sections.xpTitle}</SubTitle>
-          {content.content.xp.map(
+          <SubTitle>{textContent.sections.xpTitle}</SubTitle>
+          {textContent.content.xp.map(
             ({ company, position, dates, content, skillsTitle, skills }, i) => (
               <XpDetailsContainer
                 key={`details-container-${i}`}
@@ -87,13 +84,13 @@ export default function AboutMe() {
                 skills={skills}
                 name="experience"
               />
-            )
+            ),
           )}
         </section>
         <br />
         <section className="m-auto sm:w-11/12 md:w-10/12">
-          <SubTitle>{content.sections.toolsTitle}</SubTitle>
-          <SectionTitle>{content.sections.toolsBackend}</SectionTitle>
+          <SubTitle>{textContent.sections.toolsTitle}</SubTitle>
+          <SectionTitle>{textContent.sections.toolsBackend}</SectionTitle>
           <ImagesArray
             sectionName="toolsBackend"
             size={{ height: 34, width: 34 }}
@@ -108,7 +105,7 @@ export default function AboutMe() {
             ])}
           />
 
-          <SectionTitle>{content.sections.toolsFront}</SectionTitle>
+          <SectionTitle>{textContent.sections.toolsFront}</SectionTitle>
           <ImagesArray
             sectionName="toolsFront"
             size={{ height: 34, width: 34 }}
@@ -121,7 +118,7 @@ export default function AboutMe() {
             ])}
           />
 
-          <SectionTitle>{content.sections.toolsDesign}</SectionTitle>
+          <SectionTitle>{textContent.sections.toolsDesign}</SectionTitle>
           <ImagesArray
             sectionName="toolsDesign"
             size={{ height: 34, width: 34 }}
@@ -132,7 +129,7 @@ export default function AboutMe() {
             ])}
           />
 
-          <SectionTitle>{content.sections.toolsOther}</SectionTitle>
+          <SectionTitle>{textContent.sections.toolsOther}</SectionTitle>
           <ImagesArray
             sectionName="toolsOther"
             size={{ height: 34, width: 34 }}

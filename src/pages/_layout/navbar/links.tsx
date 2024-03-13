@@ -50,7 +50,7 @@ export default function LinksNavButtons({
 
   return (
     <TooltipProvider>
-      <ul className="grid max-w-full md:w-[90%] grid-cols-1 gap-2 overflow-clip">
+      <ul className="grid max-w-full w-[60%] sm:w-auto md:w-[90%] grid-cols-3 sm:grid-cols-1 sm:gap-2 overflow-clip">
         {links.map((link, i) => (
           <Tooltip key={`nav-link-${i}`}>
             <TooltipTrigger>

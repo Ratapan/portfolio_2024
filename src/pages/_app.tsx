@@ -11,9 +11,10 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class" 
-      themes={["light", "dark"]}>
-      <div className={`${montserrat.className} bg-coffee_bg text-coffee_foreground dark:bg-zinc-800 dark:text-gray-200 h-dvh flex`}>
+    <ThemeProvider attribute="class" themes={["light", "dark"]}>
+      <div
+        className={`${montserrat.className} relative bg-coffee_bg text-coffee_foreground dark:bg-zinc-800 dark:text-gray-200 h-dvh flex flex-col sm:flex-row`}
+      >
         <Layout>
           <Component {...pageProps} />
         </Layout>
